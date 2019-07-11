@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
+
+
 import axios from 'axios';
 
 import TitleHeader from "./components/header/TitleHeader";
-import Image from "./components/body/Image"
-import PicExplanation from "./components/footer/PicExplanation"
+import Image from "./components/body/Image";
+import PicExplanation from "./components/footer/PicExplanation";
+import HeaderExampleImage from "./components/header/HeaderExampleImage";
 import "./App.css";
 
-
+import 'semantic-ui-css/semantic.min.css';
+import { Header } from 'semantic-ui-react';
 
 
 
@@ -30,9 +34,9 @@ function App() {
 console.log(picture)
 return (
   <div className="App">
-      
+    < HeaderExampleImage/>
       <TitleHeader value={picture.title} />
-      <Image value={picture.url}/>
+      <Image className="image" value={picture.url}/>
      <PicExplanation value={picture.explanation}/>
   </div>
 );

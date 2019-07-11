@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should match snapshot 1`] = `
+<div
+  className="App"
+>
+  <h2
+    className="ui header"
+  >
+    <img
+      className="ui circular image"
+      src="mug.png"
+    />
+     Patrick
+  </h2>
+  <div />
+  <div>
+    <img />
+  </div>
+  <div />
+</div>
+`;
