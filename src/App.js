@@ -1,16 +1,24 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+
+import TitleHeader from "./components/header/TitleHeader";
+import Image from "./components/body/Image"
+import PicExplanation from "./components/footer/PicExplanation"
 import "./App.css";
 
 
 
+
+
+
 function App() {
-  const [picture, setPicture] = useState([]);
+  const [picture, setPicture] = useState({});
 
   useEffect(() => {
     console.log("return statement");
     axios
-      .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2012-03-14")
+      
+      .get("https://api.nasa.gov/planetary/apod?api_key=C1J9aPdkdxqgyQdQ1xvuGm9QrNB3T9jB7dycFdyc")
       .then(res => {
         setPicture(res.data);
       })
@@ -19,18 +27,14 @@ function App() {
       });
   }, [])
 
+console.log(picture)
 return (
   <div className="App">
-    <h1>NASA's Awesome Photo Of The Day</h1>
-    <p>
-      <h2>{picture.title}</h2>
-     
-    <img src={picture.url} alt="Nasa Picture" />
-    </p>
-    <p>
-      {picture.explanation}
-    </p>
-    </div>
+      
+      <TitleHeader value={picture.title} />
+      <Image value={picture.url}/>
+     <PicExplanation value={picture.explanation}/>
+  </div>
 );
 }
 
