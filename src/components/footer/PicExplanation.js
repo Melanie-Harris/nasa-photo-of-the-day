@@ -3,7 +3,7 @@ import React from "react";
 
 const PicExplanation = props => {
     return (
-        <div>
+        <div className="explanation">
             {props.value}
         </div>
     )

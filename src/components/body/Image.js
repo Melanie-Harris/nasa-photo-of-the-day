@@ -5,7 +5,7 @@ import React from "react";
 const Image = props => {
     return (
         <div>
-           <img src={props.value}>
+            <img className="image" src={props.value} style={{ alignContent: 'center',}}>
 
            </img>
         </div>

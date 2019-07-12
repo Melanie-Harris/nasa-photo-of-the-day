@@ -1,13 +1,15 @@
 import React from "react";
+import { Header, Image } from 'semantic-ui-react'
 
 
-
- const TitleHeader= props => {
+const TitleHeader = props => {
     return (
-        <div>
-            {props.value}
+
+        <div className="title">
+            <h1> {props.value} </h1>
         </div>
     )
 }
 
- export default TitleHeader;
+export default TitleHeader;
+
